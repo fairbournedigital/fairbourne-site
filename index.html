@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fairbourne Digital</title>
+  <meta name="description" content="Fairbourne Digital helps SMEs simplify their systems and processes so their business runs better." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0B1F3A;
+      --gold: #D8B44A;
+      --gold-light: #E6C15A;
+      --gold-dark: #B8962E;
+      --white: #FFFFFF;
+      --off-white: #F5F7FA;
+      --muted: #C9D4E3;
+      --border: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behaviour: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--navy);
+      color: var(--white);
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 80px 80px;
+    }
+
+    header {
+      margin-bottom: 80px;
+    }
+
+    .logo {
+      width: 260px;
+    }
+
+    .hero {
+      max-width: 760px;
+      margin-bottom: 110px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 18px 0;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    h1 {
+      font-size: 68px;
+      line-height: 1.04;
+      margin: 0 0 22px 0;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      max-width: 760px;
+    }
+
+    .hero-copy {
+      font-size: 22px;
+      color: var(--off-white);
+      margin: 0 0 32px 0;
+      max-width: 700px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--gold);
+      color: var(--navy);
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .btn:active {
+      background-color: var(--gold-dark);
+      transform: translateY(0);
+    }
+
+    .section-title {
+      font-size: 34px;
+      line-height: 1.15;
+      margin: 0 0 14px 0;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 48px 0;
+      max-width: 760px;
+    }
+
+    .features {
+      margin-bottom: 110px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 36px;
+    }
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feature-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+
+    .feature-card p {
+      margin: 0;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .about {
+      margin-bottom: 110px;
+      max-width: 860px;
+    }
+
+    .about p {
+      font-size: 18px;
+      color: var(--off-white);
+      margin: 0 0 18px 0;
+    }
+
+    .contact {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.04);
+      max-width: 860px;
+    }
+
+    .contact p {
+      font-size: 18px;
+      color: var(--off-white);
+      margin: 0 0 22px 0;
+      max-width: 680px;
+    }
+
+    .footer {
+      margin-top: 70px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        padding: 28px 24px 56px;
+      }
+
+      header {
+        margin-bottom: 72px;
+      }
+
+      .logo {
+        width: 220px;
+      }
+
+      .hero {
+        margin-bottom: 80px;
+      }
+
+      h1 {
+        font-size: 46px;
+        max-width: 100%;
+      }
+
+      .hero-copy {
+        font-size: 19px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features,
+      .about {
+        margin-bottom: 80px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .logo {
+        width: 190px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .hero-copy,
+      .about p,
+      .contact p,
+      .section-intro {
+        font-size: 17px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .feature-card {
+        padding: 18px;
+      }
+
+      .contact {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <img src="logograd.svg" alt="Fairbourne Digital" class="logo">
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Practical digital support for businesses</p>
+      <h1>Make your systems work the way your business actually runs</h1>
+      <p class="hero-copy">
+        Fairbourne Digital helps small and growing businesses simplify systems and IT,
+        improve day-to-day processes, and introduce practical automation without adding
+        complexity for the sake of it.
+      </p>
+      <a href="mailto:hello@fairbournedigital.com?subject=Enquiry from website&body=Hi, I’d like to discuss..." class="btn">
+        Send a message
+      </a>
+    </section>
+
+    <section class="features">
+      <h2 class="section-title">What we help with</h2>
+      <p class="section-intro">
+        Clear, practical support focused on the systems and processes that make the biggest difference.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <img src="spark.svg" alt="" class="feature-icon">
+          <div>
+            <h3>Cut through complexity</h3>
+            <p>We simplify tools, processes and handoffs so your systems make sense and work together properly.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img src="tick.svg" alt="" class="feature-icon">
+          <div>
+            <h3>Get things done properly</h3>
+            <p>From setup to delivery, we focus on practical outcomes rather than jargon, noise or over-engineering.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img src="plus.svg" alt="" class="feature-icon">
+          <div>
+            <h3>Add value where it matters</h3>
+            <p>We focus on changes that save time, reduce friction and make day-to-day operations easier to manage.</p>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <img src="upright.svg" alt="" class="feature-icon">
+          <div>
+            <h3>Build for growth</h3>
+            <p>Create digital foundations that support growth, improve visibility and scale with your business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2 class="section-title">Why Fairbourne Digital</h2>
+      <p>
+        Fairbourne Digital combines practical business thinking with hands-on digital delivery. The focus is not on selling complexity. It is on making the right systems work well, improving how teams operate, and helping businesses move forward with more confidence and less friction.
+      </p>
+      <p>
+        Whether that means improving Microsoft 365, simplifying a messy process, or shaping a more joined-up digital approach, the goal is the same: practical change that actually helps.
+      </p>
+    </section>
+
+    <section class="contact">
+      <h2 class="section-title">Start with a conversation</h2>
+      <p>
+        If your systems feel more complicated than they should, or you know there are better ways to run things, get in touch and let’s talk through it.
+      </p>
+      <a href="mailto:hello@fairbournedigital.com?subject=Enquiry from website&body=Hi, I’d like to discuss..." class="btn">
+        Email hello@fairbournedigital.com
+      </a>
+    </section>
+
+    <div class="footer">
+      Fairbourne Digital · Built for practical, growing businesses
+    </div>
+
+  </div>
+</body>
+</html>
